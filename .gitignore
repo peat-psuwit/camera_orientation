@@ -1,2 +1,3 @@
 *.o
 /camera_orientation
+/.vscode
