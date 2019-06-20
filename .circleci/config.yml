@@ -1,0 +1,22 @@
+version: 2
+
+jobs:
+  build-armhf:
+    docker:
+      - image: clickable/ubuntu-sdk:16.04-armhf
+    steps:
+      - run: "apt update && apt install -y libhybris-dev:armhf"
+      - checkout
+      - run: "qmake . && make"
+      - store_artifacts:
+          path: camera_orienatation
+
+  build-amd64:
+    docker:
+      - image: clickable/ubuntu-sdk:16.04-amd64
+    steps:
+      - run: "apt update && apt install -y libhybris-dev:amd64"
+      - checkout
+      - run: "qmake . && make"
+      - store_artifacts:
+          path: camera_orienatation
