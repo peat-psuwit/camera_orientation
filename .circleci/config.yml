@@ -19,7 +19,7 @@ jobs:
       - checkout
       - run: "qmake . && make"
       - store_artifacts:
-          path: camera_orienatation
+          path: camera_orientation
 
 workflows:
   version: 2
