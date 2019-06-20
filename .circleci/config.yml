@@ -25,5 +25,6 @@ workflows:
   version: 2
  
   build_multiarch:
-    - build_armhf
-    - build_amd64
+    jobs:
+      - build_armhf
+      - build_amd64
