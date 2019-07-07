@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run: "qmake . && make"
       - store_artifacts:
-          path: camera_orienatation
+          path: camera_orientation
 
   build_amd64:
     docker:
